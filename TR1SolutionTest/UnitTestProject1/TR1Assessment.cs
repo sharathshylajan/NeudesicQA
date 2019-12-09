@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using Microsoft.Office.Interop.Excel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
@@ -78,15 +80,46 @@ namespace TR1AssessmentProject
 
             #region[Intermediate] #5 iFrame Handling
             GotoUrl("http://hugelearning.com/iframe-practice-page/");
-           
 
+
+            #endregion
+
+            #region[Intermediate] #7 Application Configuaration Manager - Fetch 'Email Address' & 'Password' from an (Create) Application Configuration file
+            string email = null, password = null;
+
+            //Block of code to fetch data 'Email' & 'Password' from .config file
+
+            //end
+
+            GotoUrl("https://getbootstrap.com/docs/4.0/components/forms/");
+            driver.FindElement(By.Id("exampleInputEmail1")).SendKeys(email);
+            driver.FindElement(By.Id("exampleInputPassword1")).SendKeys(password);
+            Console.WriteLine("Email Address : {0}\n Password : {1}", email, password);
+            #endregion
+
+            #region[Intermediate] #8 Excel Manager - Fetch 'Email Address' & 'Password' from an (Create) Application Configuration file
+            string email1 = null, password1 = null;
+
+            //Block of code to fetch data 'Email' & 'Password' from EXCEL
+            
+
+            //End
+
+            GotoUrl("https://getbootstrap.com/docs/4.0/components/forms/");
+            driver.FindElement(By.Id("exampleInputEmail1")).SendKeys(email1);
+            driver.FindElement(By.Id("exampleInputPassword1")).SendKeys(password1);
+            Console.WriteLine("Email Address : {0}\n Password : {1}", email1, password1);
+            #endregion
+
+            #region [Intermediate] #8 Calculate the sum of matrix cells from MS EXCEL sheet
+            
             #endregion
         }
 
         #region[Intermediate] #6 Implement NUnit/MSTest annotations in the current solution
-        
+
 
         #endregion
-        
+
     }
 }
